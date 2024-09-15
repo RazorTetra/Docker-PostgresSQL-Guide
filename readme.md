@@ -56,9 +56,9 @@ Pastikan Docker Desktop sudah terinstall dan berjalan di mesin Windows kamu. Kam
 
 Untuk memastikan container berjalan dengan baik, jalankan:
 
-    ```bash
+    
     docker ps
-    ```
+    
 
 Ini akan menampilkan daftar container yang sedang berjalan. Kamu harus melihat container dengan nama `postgres-okupasi`.
 
@@ -112,12 +112,20 @@ Setelah berhasil login, kamu dapat menjalankan perintah SQL untuk berinteraksi d
 
 Jika kamu ingin menghentikan dan menghapus container, jalankan:
 
-    ```bash
+   
     docker-compose down
-    ```
+    
 
 Ini akan menghentikan dan menghapus semua container yang didefinisikan di file `docker-compose.yml`, tetapi volume akan tetap ada sehingga data database tidak hilang.
 
 ---
 
-Dokumentasi ini seharusnya memandu kamu dari awal hingga akhir dalam membuat dan mengakses database PostgreSQL di Docker di Windows. Jika ada pertanyaan lebih lanjut atau masalah lain, jangan ragu untuk bertanya!
+## 8. Contoh koneksi di .env
+
+Untuk menghubungkan menggunakan .env, contoh penulisannya adalah sebagai berikut :
+
+    
+    DATABASE_URL="postgresql://admin:admin@localhost:5433/postgres-okupasi?schema=public"
+    
+
+---
