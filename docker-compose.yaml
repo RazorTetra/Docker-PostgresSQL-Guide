@@ -1,0 +1,15 @@
+services:
+  postgres-okupasi:
+    image: sha256:74cc00b2e28f8b5cad42680cc425b261544eee3dfe70fbdf903015dac9b0fe4a
+    container_name: postgres-okupasi
+    environment:
+      POSTGRES_DB: okupasi
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-okupasi-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-okupasi-data:
